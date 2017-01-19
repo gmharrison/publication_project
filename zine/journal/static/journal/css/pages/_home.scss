@@ -1,0 +1,45 @@
+#landing-body{
+  @include linear-gradient(#6D7091, #3E3B45);
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+
+.gradient-container{
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+
+.small-landing-gradient{
+  @include linear-gradient(#8D5769, #26273B);
+  height: 400px;
+  margin-top: 120px;
+  position: relative;
+}
+
+.description-text{
+  width: 100px;
+  position: absolute;
+  left: 17px;
+  top: 160px;
+
+  p{
+    @include paragraph-text(10px, $purple-gray);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    line-height: 1.2;
+    font-weight: 300;
+    float: left;
+  }
+}
+.main-text-container{
+  position: absolute;
+  bottom: 45px;
+  right: 150px;
+
+  h3{
+    @include header-text;
+    text-transform: uppercase;
+  }
+}

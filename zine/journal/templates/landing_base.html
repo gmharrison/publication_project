@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Zine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'journal/css/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+    <!-- Main Content -->
+    <body id="landing-body">
+        {% block main_landing_section %}
+            <div class="main-landing-section">
+                <div class="logo-container">
+                    <div class="logo">
+
+                    </div>
+                </div>
+                <div class="description-text">
+                    <p>This is where our wonderful and fantastic collective description will go</p>
+                </div>
+                <div class="gradient-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <div class="small-landing-gradient">
+                                    <div class="main-outline">
+                                        {% block main_landing_image %}
+                                        {% endblock %}
+                                        {% block main_landing_text %}
+                                        {% endblock %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </body>
+</html>

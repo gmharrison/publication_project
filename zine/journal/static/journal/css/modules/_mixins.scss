@@ -1,0 +1,36 @@
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin header-text{
+  font-size: 60px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Playfair', serif;
+
+  a{
+    color: white;
+  }
+}
+
+@mixin paragraph-text($size, $color){
+  font-size: $size;
+  color: $color;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}

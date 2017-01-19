@@ -1,0 +1,19 @@
+.main-outline{
+  border: 1px solid #ACA8B8;
+  background: transparent;
+  height: 455px;
+  padding: 0px 27vw;
+  position: absolute;
+  top: -38px;
+  right: -40px;
+}
+
+.logo-container{
+  position: absolute;
+  height: 100px;
+  width: 60px;
+  border: $landing-line;
+  border-bottom: 15px solid #ACA8B8;
+  top: 40px;
+  left: 40px;
+}

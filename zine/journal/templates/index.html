@@ -1,16 +1,16 @@
+{% extends 'landing_base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'journal/styles.css' %}">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="test-div">
+{% block main_landing_image %}
+    <div class="main-image-container">
+        <div class="placeholder">
 
+        </div>
     </div>
-  </body>
-</html>
+{% endblock %}
+
+{% block main_landing_text %}
+    <div class="main-text-container">
+        <h3><a href="">take me</a></h3>
+    </div>
+{% endblock %}

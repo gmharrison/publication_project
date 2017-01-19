@@ -1,21 +1,3 @@
-@mixin linear-gradient($direction, $color-stops...) {
-  background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background: linear-gradient($direction, $color-stops);
-}
-
-@mixin linear-gradient($direction, $color-stops...) {
-  // Direction has been omitted and happens to be a color-stop
-  @if is-direction($direction) == false {
-    $color-stops: $direction, $color-stops;
-    $direction: 180deg;
-  }
-
-  background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background: linear-gradient($direction, $color-stops);
-}
-
 @function is-direction($value) {
   $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
   $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
@@ -48,12 +30,4 @@
   }
 
   @return 90deg - $value;
-}
-
-body{
-	@include linear-gradient(#31B7D7, #EDAC7D);
-
-    .test-div{
-      height: 5000px;
-    }
 }
