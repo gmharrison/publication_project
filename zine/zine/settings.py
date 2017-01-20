@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'zine.wsgi.application'
+WSGI_APPLICATION = 'zine.wsgi.journal'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
