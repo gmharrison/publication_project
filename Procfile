@@ -1,1 +1,1 @@
-web: gunicorn zine:app
+web: gunicorn journal:app
