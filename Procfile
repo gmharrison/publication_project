@@ -1,2 +1,1 @@
-web: gunicorn zine:app --log-file -
-heroku ps:scale web=1
+web: gunicorn zine:app
