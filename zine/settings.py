@@ -49,7 +49,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'zine.urls'
+ROOT_URLCONF = 'journal.urls'
 
 TEMPLATES = [
     {
