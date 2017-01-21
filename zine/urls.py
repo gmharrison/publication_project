@@ -19,3 +19,4 @@ urlpatterns = [
     url(r'^', include('journal.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
