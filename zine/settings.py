@@ -20,7 +20,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 AWS_STORAGE_BUCKET_NAME = 'thejournalapp'
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-AWS_S3_CUSTOM_DOMAIN = "https://thejournalapp.s3.amazonaws.com"
+AWS_S3_CUSTOM_DOMAIN = "thejournalapp.s3.amazonaws.com"
 
 
 # Quick-start development settings - unsuitable for production
