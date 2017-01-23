@@ -20,7 +20,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 AWS_STORAGE_BUCKET_NAME = 'thejournalapp'
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-AWS_S3_CUSTOM_DOMAIN = "https://thejournalapp.s3.amazonaws.com/"
+AWS_S3_CUSTOM_DOMAIN = "https://thejournalapp.s3.amazonaws.com"
 
 
 # Quick-start development settings - unsuitable for production
@@ -115,7 +115,7 @@ USE_TZ = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
