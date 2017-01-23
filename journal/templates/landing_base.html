@@ -1,11 +1,11 @@
-{% load static %}
+{% load static from staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>The Zine</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}journal/css/main.css">
+    <link rel="stylesheet" href="{% static 'journal/css/main.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
