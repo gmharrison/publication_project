@@ -27,14 +27,13 @@ AWS_S3_CUSTOM_DOMAIN = "thejournalapp.s3.amazonaws.com"
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = ['*']
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
 
 
 # Application definition
@@ -109,20 +108,40 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+if not DEBUG:
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
-# Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
-# you run `collectstatic`).
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'static'),
+    )
+
+    # Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
+    # you run `collectstatic`).
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+
+if DEBUG:
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/1.8/howto/static-files/
+    # https://docs.djangoproject.com/en/1.9/howto/static-files/
+
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/1.9/howto/static-files/
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATIC_URL = '/static/'
+
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'static'),
+    )

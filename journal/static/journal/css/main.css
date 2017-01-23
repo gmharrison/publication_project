@@ -70,9 +70,9 @@
     color: white;
     font-style: italic;
     font-weight: bold;
-    font-family: 'Playfair', serif;
-    text-transform: uppercase; }
+    font-family: 'Playfair', serif; }
     .main-text-container h3 a {
-      color: white; }
+      color: white;
+      text-transform: lowercase; }
 
 /*# sourceMappingURL=main.css.map */

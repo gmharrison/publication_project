@@ -40,6 +40,9 @@
 
   h3{
     @include header-text;
-    text-transform: uppercase;
+      a{
+        color: white;
+        text-transform: lowercase;
+    }
   }
 }

@@ -22,10 +22,6 @@
   font-style: italic;
   font-weight: bold;
   font-family: 'Playfair', serif;
-
-  a{
-    color: white;
-  }
 }
 
 @mixin paragraph-text($size, $color){
