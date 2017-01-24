@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^$', views.HomePageView.as_view(), name='home'),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     url(r'^zine', views.MainZineView.as_view(), name='main-zine'),
+    url(r'^about', views.AboutView.as_view(), name='about'),
 ]

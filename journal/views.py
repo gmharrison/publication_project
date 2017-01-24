@@ -15,4 +15,8 @@ class HomePageView(TemplateView):
 
 
 class MainZineView(TemplateView):
-    template_name = "main_zine.html"
+    template_name = "zine_content.html"
+
+
+class AboutView(TemplateView):
+    template_name = "about.html"
