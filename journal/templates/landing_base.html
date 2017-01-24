@@ -14,14 +14,16 @@
     </script>
   </head>
     <!-- Main Content -->
-    <body id="landing-body">
-        {% block main_landing_section %}
+    {% block main_landing_section %}
+        <body id="landing-body">
             <div class="main-landing-section">
-                <div class="logo-container">
-                    <div class="logo">
+                {% block logo_container %}
+                    <div class="logo-container">
+                        <div class="logo">
 
+                        </div>
                     </div>
-                </div>
+                {% endblock %}
                 <div class="description-text">
                     <p>This is where our wonderful and fantastic collective description will go</p>
                 </div>
@@ -42,6 +44,6 @@
                     </div>
                 </div>
             </div>
-        {% endblock %}
-    </body>
+        </body>
+    {% endblock %}
 </html>

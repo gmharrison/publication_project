@@ -16,6 +16,26 @@
   top: 40px;
   left: 40px; }
 
+.nav-container {
+  background: white;
+  width: 100%;
+  padding: 120px 50px 10px 50px; }
+
+.zine-navbar {
+  font-size: 18px;
+  color: #27273B;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: right; }
+  .zine-navbar li {
+    display: inline-block;
+    padding: 0 10px; }
+  .zine-navbar a {
+    color: #27273B; }
+    .zine-navbar a:hover {
+      color: #27273B; }
+
 .main-image-container {
   height: 410px;
   position: absolute;
@@ -74,5 +94,19 @@
     .main-text-container h3 a {
       color: white;
       text-transform: lowercase; }
+
+#main-zine-body {
+  background: #FDF5F8;
+  background: -webkit-linear-gradient(-90deg, #FDF5F8, #D7F0FF);
+  background: linear-gradient(180deg, #FDF5F8, #D7F0FF);
+  height: 100vh;
+  position: relative; }
+
+.main-content-section {
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
+
+a:hover {
+  text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+.nav-container{
+  background: white;
+  width: 100%;
+  padding: 120px 50px 10px 50px;
+}
+
+.zine-navbar{
+  @include subheader-text(#27273B);
+  list-style: none;
+  text-transform: uppercase;
+  text-align: right;
+
+  li{
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+  a{
+    color: $body-text;
+
+    &:hover{
+      color: $body-text;
+    }
+  }
+}

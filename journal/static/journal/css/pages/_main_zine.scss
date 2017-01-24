@@ -1,0 +1,10 @@
+#main-zine-body{
+  @include linear-gradient(#FDF5F8, #D7F0FF);
+  height: 100vh;
+  position: relative;
+}
+
+.main-content-section{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
