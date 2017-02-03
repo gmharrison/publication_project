@@ -3,14 +3,13 @@
 
 {% block main_landing_image %}
     <div class="main-image-container">
-        <div class="placeholder">
-
-        </div>
+        <img src="{% static 'journal/img/cover_photo.png' %}" class="cover-photo">
     </div>
 {% endblock %}
 
 {% block main_landing_text %}
     <div class="main-text-container">
-        <h3><a href="{% url 'main-zine' %}">take me</a></h3>
+        <div class="green-line"></div>
+        <h3><a href="{% url 'main-zine' %}">take<br>me</a></h3>
     </div>
 {% endblock %}

@@ -1,10 +1,8 @@
 // Main Landing Images //
 
 .main-image-container{
-  height: 410px;
-  position: absolute;
-  right: -1px;
-  top: -37px;
-  padding: 0 25vw;
-  background: #ACA8B8;
+  z-index: 1;
+}
+.cover-photo{
+  height: 470px;
 }

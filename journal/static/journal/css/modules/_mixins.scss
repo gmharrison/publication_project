@@ -17,11 +17,10 @@
 }
 
 @mixin header-text{
-  font-size: 60px;
-  color: white;
-  font-style: italic;
-  font-weight: bold;
-  font-family: 'Playfair', serif;
+  font-size: 35px;
+  color: $green;
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @mixin paragraph-text($size, $color){

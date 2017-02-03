@@ -1,11 +1,21 @@
-.main-outline{
-  border: 1px solid #ACA8B8;
-  background: transparent;
-  height: 455px;
-  padding: 0px 27vw;
+.outline-container{
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   position: absolute;
-  top: -38px;
-  right: -40px;
+  z-index: 1000;
+  top: 50px;
+  left: -85px;
+}
+
+.main-outline{
+  border: 1px solid $green;
+  background: transparent;
+  height: 400px;
+  width: 450px;
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -o-transform: skew(10deg);
+  transform: skew(10deg);
 }
 
 .logo-container{
@@ -13,7 +23,29 @@
   height: 100px;
   width: 60px;
   border: $landing-line;
-  border-bottom: 15px solid #ACA8B8;
+  border-bottom: 15px solid $green;
   top: 40px;
   left: 40px;
+}
+
+.curve-container{
+  position: absolute;
+  top: 290px;
+  left: -10px;
+}
+
+.curve{
+  width: 250px;
+  height: 100px;
+  border: solid 1px $green;
+  border-color: $green transparent transparent transparent;
+  border-radius: 90%/150px 150px 0 0;
+  -webkit-transform: rotate(230deg);
+}
+
+.green-line{
+  width: 25px;
+  height: 1px;
+  background-color: $green;
+  margin-bottom: 3px;
 }
