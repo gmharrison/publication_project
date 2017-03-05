@@ -51,8 +51,8 @@
 
 .zine-navbar {
   font-size: 18px;
-  color: #27273B;
-  font-family: 'Roboto', sans-serif;
+  color: #52ba8b;
+  font-family: 'Proxima Nova', sans-serif;
   list-style: none;
   text-transform: uppercase;
   text-align: right; }
@@ -60,7 +60,7 @@
     display: inline-block;
     padding: 0 10px; }
   .zine-navbar a {
-    color: #27273B; }
+    color: #52ba8b; }
     .zine-navbar a:hover {
       color: #27273B; }
 
@@ -70,20 +70,57 @@
 .cover-photo {
   height: 470px; }
 
-#landing-body {
-  background: #fbfbfb;
+#main-body {
+  background: #fbfbfb; }
+
+.main-container {
+  height: 100vh; }
+
+.pages-container, .scroll-content-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  display: block;
+  background: #fbfbfb; }
+
+.fixed-content-container {
+  position: fixed;
+  width: 100%;
   height: 100vh;
+  overflow: hidden; }
+
+.content-box {
+  position: absolute;
+  height: 2000px; }
+
+.content {
+  width: 100%;
+  height: 2000px;
+  top: 0px;
+  overflow: visible; }
+
+.landing-container {
   padding: 50px;
-  position: relative; }
+  left: 0px;
+  top: -60px;
+  width: 100vw; }
+
+.large-div {
+  padding: 0 50px; }
+
+.main-landing-section {
+  height: 100vh; }
 
 .graphics-container {
   position: relative; }
 
 .description-text {
-  width: 160px;
+  width: 150px;
   position: absolute;
-  left: -10px;
-  top: 180px; }
+  left: -7px;
+  top: 155px; }
   .description-text p {
     font-size: 10px;
     color: #52ba8b;
@@ -94,7 +131,7 @@
     line-height: 1.8;
     font-weight: 300;
     float: left;
-    letter-spacing: .5em; }
+    letter-spacing: .3em; }
 
 .main-text-container {
   position: absolute;
@@ -107,10 +144,14 @@
     font-weight: 100;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: .2em;
-    line-height: 1.3; }
-    .main-text-container h3 a {
-      color: #52ba8b;
-      text-transform: uppercase; }
+    line-height: 1.3;
+    color: #52ba8b;
+    text-transform: uppercase; }
+
+.small-div {
+  border-bottom: 1px solid #52ba8b;
+  width: 300px;
+  height: 400px; }
 
 #main-zine-body {
   background: #FDF5F8;

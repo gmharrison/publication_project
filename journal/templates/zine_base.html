@@ -1,23 +1,23 @@
-{% extends 'landing_base.html' %}
-{% load static from staticfiles %}
-
-{% block main_landing_section %}
-    <body id="main-zine-body">
-        {% block navigation %}
-            <div class="nav-container">
-                {% block logo_container %}
-                    {{ block.super }}
-                {% endblock %}
-                <div class="nav-section">
-                    <ul class="zine-navbar">
-                        <li><a href="{% url 'main-zine' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        {% endblock %}
-
-        {% block main_content_section %}
-        {% endblock %}
-    </body>
-{% endblock %}
+{#{% extends 'landing_base.html' %}#}
+{#{% load static from staticfiles %}#}
+{##}
+{#{% block main_landing_section %}#}
+{#    <body id="main-zine-body">#}
+{#        {% block navigation %}#}
+{#            <div class="nav-container">#}
+{#                {% block logo_container %}#}
+{#                    {{ block.super }}#}
+{#                {% endblock %}#}
+{#                <div class="nav-section">#}
+{#                    <ul class="zine-navbar">#}
+{#                        <li><a href="{% url 'main-zine' %}">Home</a></li>#}
+{#                        <li><a href="{% url 'about' %}">About</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endblock %}#}
+{##}
+{#        {% block main_content_section %}#}
+{#        {% endblock %}#}
+{#    </body>#}
+{#{% endblock %}#}

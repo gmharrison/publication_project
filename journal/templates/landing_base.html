@@ -8,49 +8,88 @@
     <link rel="stylesheet" href="{% static 'journal/css/main.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="{% static 'journal/js/landing.js' %}"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous">
-    </script>
+{#    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="#}
+{#            crossorigin="anonymous">#}
+{#    </script>#}
   </head>
     <!-- Main Content -->
-    {% block main_landing_section %}
-        <body id="landing-body">
-            <div class="main-landing-section">
-                {% block logo_container %}
-                    <div class="logo-container">
-                        <div class="logo">
-
+    <body id="main-body">
+        <div class="main-container">
+            <div class="pages-container">
+                <div class="fixed-content-container">
+                    <div class="zine-container">
+                            {% block navigation %}
+                        <div class="nav-container">
+                            <div class="nav-section">
+                                <ul class="zine-navbar">
+                                    <li><a href="{% url 'main-zine' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                {% endblock %}
-                <div class="description-text">
-                    <p>This is where subtitle goes</p>
-                </div>
-                <div class="main-container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-sm-offset-4">
-                                <div class="graphics-container">
-                                    <div class="outline-container">
-                                        <div class="main-outline">
-                                        </div>
-                                    </div>
-                                    <div class="curve-container">
-                                        <div class="curve">
+                        {% endblock %}
 
+                        {% block main_content_section %}
+                            <div class="large-div">
+                                <div class="small-div">
+
+                                </div>
+                                <div class="curve-container">
+                                    <div class="curve two">
+
+                                    </div>
+                                </div>
+                            </div>
+                        {% endblock %}
+                    </div>
+                </div>
+                <div class="scroll-content-container">
+                    <div class="content-box">
+                        <div class="content">
+                            <div class="landing-container">
+                        <div class="main-landing-section">
+                            {% block logo_container %}
+                                <div class="logo-container">
+                                    <div class="logo">
+
+                                    </div>
+                                </div>
+                            {% endblock %}
+                            <div class="description-text">
+                                <p>This is where subtitle goes</p>
+                            </div>
+                            <div class="main-container">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <div class="graphics-container">
+                                                <div class="outline-container">
+                                                    <div class="main-outline">
+                                                    </div>
+                                                </div>
+                                                <div class="curve-container">
+                                                    <div class="curve">
+
+                                                    </div>
+                                                </div>
+                                                    {% block main_landing_image %}
+                                                    {% endblock %}
+                                                    {% block main_landing_text %}
+                                                    {% endblock %}
+                                            </div>
                                         </div>
                                     </div>
-                                        {% block main_landing_image %}
-                                        {% endblock %}
-                                        {% block main_landing_text %}
-                                        {% endblock %}
                                 </div>
                             </div>
                         </div>
                     </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </body>
-    {% endblock %}
+        </div>
+    </body>
 </html>
