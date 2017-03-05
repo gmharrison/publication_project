@@ -118,9 +118,9 @@ if not DEBUG:
     STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
 
     # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'journal/static'),
-    )
+    # STATICFILES_DIRS = (
+    #     os.path.join(BASE_DIR, 'journal/static'),
+    # )
 
     # Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
     # you run `collectstatic`).
